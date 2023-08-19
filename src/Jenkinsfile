@@ -1,15 +1,15 @@
 def mainDir="."
 def ecrLoginHelper="docker-credential-ecr-login"
-def region="ap-northeast-1"
-def ecrUrl="598552988151.dkr.ecr.ap-northeast-1.amazonaws.com"
+def region="ap-northeast-2"
+def ecrUrl="486637036235.dkr.ecr.ap-northeast-2.amazonaws.com"
 def repository="board"
-def deployHost="54.168.148.170"
+def deployHost="3.36.43.203"
 
 pipeline {
     agent any
 
     stages {
-        stage('Pull Codes from Github'){
+        stage('Pull Codes from Github'){ // 젠킨스의 각 파이프 라인 이름
             steps{
                 checkout scm
             }
